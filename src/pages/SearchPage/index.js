@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const SearchPage = () => {
-    return <h1>I search for shows/films.</h1>
-}
-
-export default SearchPage;
-=======
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -74,4 +65,3 @@ const SearchPage = () => {
 };
 
 export default SearchPage;
->>>>>>> fb3fb19 (Save to my personal fork)
