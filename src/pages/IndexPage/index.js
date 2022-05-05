@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const IndexPage = () => {
-    return <h1>I don't have a defined purpose yet.</h1>
-}
+  return <h1>This is the index page of this Film App</h1>;
+};
 
 export default IndexPage;

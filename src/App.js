@@ -1,22 +1,32 @@
 import React from "react";
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
-import {default as Layout} from './layouts';
-import * as Pages from './pages';
+import {
+  IndexPage,
+  AboutPage,
+  SearchPage,
+  WorkPage,
+  NotFoundPage,
+} from "./pages";
 
+import { default as Layout } from "./layouts";
+
+import "./App.css";
 
 const App = () => {
-    return <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route path="/" element={<Pages.IndexPage />} />
-                <Route path="/about" element={<Pages.AboutPage />} />
-                <Route path="/search">
-                    <Route path="/search" element={<Pages.SearchPage />} />
-                    <Route path=":id" element={<Pages.WorkPage />} />
-                </Route>
-                <Route path="*" element={<Pages.NotFoundPage/ >} />
-            </Route>
-           </Routes>
-}
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="/" element={<IndexPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/search">
+          <Route path="/search" element={<SearchPage />} />
+          <Route path=":name" element={<WorkPage />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
+  );
+};
 
 export default App;
